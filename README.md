@@ -93,8 +93,7 @@ helm install hello-world ./nginx-chart --dry-requirement
 #### Pipelines
 
 
-#### Conditionals
-
+#### Conditionals, With Blocks, Range 
 
 #### Chart hooks
 
@@ -116,3 +115,10 @@ helm rollback -> verify -> render -> pre-rollback -> rollback -> post-rollback
 
 
 set values to hooks for the order of executing hooks which in turn executes the script like email notification, setup banner and take Backup and after that upgrade starts.
+
+
+#### helm package
+
+helm package ./nginx-chart
+
+gpg --full-generate-key "name"
