@@ -10,3 +10,16 @@ helm quick sheet
 ```
 brew install helm
 ```
+
+```
+helm list
+
+helm install <chart>
+helm upgrade <chart>
+helm delete <chart> or helm uninstall <chart>
+```
+
+#### Charts repository
+
+ArtifactHub.io
+
