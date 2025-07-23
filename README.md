@@ -23,3 +23,31 @@ helm delete <chart> or helm uninstall <chart>
 
 ArtifactHub.io
 
+
+```
+helm search hub wordpress
+
+helm search hub bitnami
+
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm install test-bitnami  bitnami/wordpress
+
+helm list
+
+helm uninstall test-bitnami
+```
+
+
+## Customize package deployment
+
+```
+helm install --set wordpressBlogname="Bitnami guide" --set wordpressEmail="test@gmail.com" test-bitnami  bitnami/wordpress
+
+```
+
+```
+helm install --values custom-values.yaml test-bitnami  bitnami/wordpress
+```
+
+
+
