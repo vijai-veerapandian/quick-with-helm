@@ -68,4 +68,51 @@ kubectl describe pod nginx-test-905u
 
 ```
 helm history nginx-test
+```
 
+Chart validation
+
+```
+helm lint ./nginx-chart
+```
+or 
+```
+helm template ./nginx-chart
+
+helm template hello-test1 ./nginx-chart
+
+helm template ./nginx-chart --debug
+```
+```
+helm install hello-world ./nginx-chart --dry-requirement
+```
+
+#### Functions
+
+
+#### Pipelines
+
+
+#### Conditionals
+
+
+#### Chart hooks
+
+#### Installation hooks
+
+helm install -> verify -> render -> pre-install -> install -> post-install 
+
+#### upgrade hooks 
+
+helm upgrade -> verify -> render -> pre-upgrade -> upgrade -> post-upgradefs
+
+#### delete hooks
+
+helm delete -> verify -> render -> pre-delete -> delete -> post-delete
+
+#### Rollback hooks
+
+helm rollback -> verify -> render -> pre-rollback -> rollback -> post-rollback
+
+
+set values to hooks for the order of executing hooks which in turn executes the script like email notification, setup banner and take Backup and after that upgrade starts.
