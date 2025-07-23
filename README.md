@@ -49,5 +49,23 @@ helm install --set wordpressBlogname="Bitnami guide" --set wordpressEmail="test@
 helm install --values custom-values.yaml test-bitnami  bitnami/wordpress
 ```
 
+#### Package Life cycle
 
+
+```
+helm install nignx-test bitnami/nginx --version 7.1.0
+kubectl get pods 
+kubectl describe pod nginx-test-8038
+```
+
+```
+helm upgrade nginx-test bitnami/nginx 
+kubectl get pods 
+kubectl describe pod nginx-test-905u
+
+```
+
+
+```
+helm history nginx-test
 
